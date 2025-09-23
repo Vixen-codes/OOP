@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!-- Specify which style warnings may be ignored for COM1034. -->
+
+<!DOCTYPE suppressions PUBLIC
+    "-//Checkstyle//DTD SuppressionFilter Configuration 1.1//EN"
+    "https://checkstyle.org/dtds/suppressions_1_1.dtd">
+
+<suppressions>
+    <!-- JavaDoc. -->
+    <suppress files="." checks="JavadocPackage"/>
+    <suppress files="." checks="JavadocVariable"/>
+    <suppress files="." checks="MissingJavadocType"/>
+    <suppress files="." checks="MissingJavadocMethod"/>
+
+    <suppress files="." checks="DesignForExtension"/>
+    <suppress files="." checks="HiddenField"/>
+    <suppress files="." checks="FinalParameters"/>
+
+    <!-- Permit ProblemSet_Xy package names for readability. -->
+    <suppress files="." checks="PackageName"/>
+
+    <!-- Permit non-constant final numbers, esp. in tests for readability. -->
+    <suppress files="." checks="MagicNumber"/>
+
+    <!-- Permit tabs due to editor unpredictability. -->
+    <suppress files="." checks="FileTabCharacter"/>
+
+    <!-- Permit whitepace after punctuation as not obvious. -->
+    <suppress files="." checks="NoWhitespaceAfter"/>
+
+    <!-- Do not warn for tests. -->
+    <suppress files=".*Test.*" checks=".*" />
+</suppressions>
+
+

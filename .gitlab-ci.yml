@@ -1,0 +1,14 @@
+image: alpine:latest
+
+pages:
+  stage: deploy
+  script:
+      - apk add openjdk17 python3 py3-mako
+      - cp -r /shared/com1034/* .
+      - python3 com1034.py
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
+
