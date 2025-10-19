@@ -4,9 +4,9 @@ public class Meal {
    private Food mainCourse;
    private Food dessert;
    //constructor
-   public Meal (Food mainCourse, Food dessert) {
+   public Meal(Food mainCourse, Food dessert) {
 	   this.mainCourse = mainCourse;
-	   this.dessert = dessert;	 
+	   this.dessert = dessert;
    }
    //total sugar calcuator method
    public double calculateTotalSugarLevel() {
@@ -14,7 +14,8 @@ public class Meal {
    }
    @Override
    public String toString() {
-	   return "Meal [mainCourse=" + mainCourse.getName() + ", dessert=" + dessert.getName()+ "]";
+	   return "Meal [mainCourse =" + mainCourse.getName() +
+			   ", dessert =" + dessert.getName() + "]";
    }
 }
 
