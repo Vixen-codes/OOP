@@ -5,7 +5,6 @@ public class Student {
 	private String forename;
 	private String surname;
 	private int age;
-	
 	//constructor
 	public Student(String forename, String surname, int age) {
 		this.forename = forename;
@@ -17,7 +16,7 @@ public class Student {
 		return age;
 	}
 	public String getFullname() {
-		return forename + "" + surname;
+		return forename + " " + surname;
 	}
 	//setter for firstname,lastname and age
     public void setAge(int age) {
@@ -27,6 +26,6 @@ public class Student {
     	this.forename = forname;
     }
     public void setSurname(String surname) {
-    	this.surname= surname; 
+    	this.surname= surname;
     }
 }
