@@ -9,7 +9,7 @@ public class Module {
 	private Assessment assessment3;
 
 	//contructor (bob the builder hay!)
-	public Module(Assessment assessment1, Assessment assessment2, 
+	public Module(Assessment assessment1, Assessment assessment2,
 			       Assessment assessment3) {
 		this.assessment1 = assessment1;
 		this.assessment2 = assessment2;
@@ -24,7 +24,7 @@ public class Module {
 	@Override
 	public String toString() {
 		return MODULE_NAME + " ("
-				+ String.format("%1f", calculateAverage()) 
+				+ String.format("%.1f", calculateAverage())
 				+ "%)";
 	}
 }
