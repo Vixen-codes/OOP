@@ -33,8 +33,11 @@ public class Employee {
    public void setSurname(String surname) {
 	this.surname = surname;
    }
-   public AnnualSalary getSalary() {
-	return salary;
+   public double getSalary() {
+	return salary.getSalary();
+   }
+   public AnnualSalary getSalaryObject() {
+	    return salary;
    }
    public void setSalary(AnnualSalary salary) {
 	this.salary = salary;
@@ -45,6 +48,12 @@ public class Employee {
    public void setCompanyPosition(Position companyPosition) {
 	this.companyPosition = companyPosition;
    }
+   public String getPositionName() {
+	    return companyPosition.getRoleName(); 
+	    //test calls for employee.getPositionNAme() 
+	    //but since we dont have that we make a helpermethod
+	}
+
    //displaying the employeee name
    public void displayEmployeeName() {
 	   System.out.println(forename + " " + surname);
