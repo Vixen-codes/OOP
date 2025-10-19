@@ -5,11 +5,12 @@ public class AnnualSalary {
     private double salary;
     private final double Personal_Allowance = 12570.0;
 
-    private final double Basic_Rate_Limit = 50270.0;
-    private final double Higher_Rate_Limit = 125140.0;
-    private final double Basic_Rate = 0.20;
-    private final double Higher_Rate = 0.40;
-    private final double Additional_Rate = 0.45;
+    private final double personalAllowance = 12570.0;
+    private final double basicRateLimit = 50270.0;
+    private final double higherRateLimit = 125140.0;
+    private final double basicRate = 0.20;
+    private final double higherRate = 0.40;
+    private final double additionalRate = 0.45;
     //
     public AnnualSalary() {
         this.salary = 0.0;
@@ -29,18 +30,16 @@ public class AnnualSalary {
             return 0.0;
         }
         double tax = 0.0;
-        if (taxableIncome <= (Basic_Rate_Limit - Personal_Allowance)) {
-            tax = taxableIncome * Basic_Rate;
-        } else if (taxableIncome <= (Higher_Rate_Limit - Personal_Allowance)) {
-            tax = (Basic_Rate_Limit - Personal_Allowance) * Basic_Rate 
-                   + (taxableIncome - (Basic_Rate_Limit - Personal_Allowance)) 
-                   * Higher_Rate;
+        if (taxableIncome <= (basicRateLimit - Personal_Allowance)) {
+            tax = taxableIncome * basicRate;
+        } else if (taxableIncome <= (higherRateLimit - Personal_Allowance)) {
+            tax = (basicRateLimit - Personal_Allowance) * basicRate
+                   + (taxableIncome - (basicRateLimit - Personal_Allowance))
+                   * higherRate;
         } else {
-            tax = (Basic_Rate_Limit - Personal_Allowance) * Basic_Rate 
-                    + (Higher_Rate_Limit - Basic_Rate_Limit) * Higher_Rate 
-                  + (taxableIncome - (Higher_Rate_Limit - Personal_Allowance)) 
-                  * Additional_Rate;
+            tax = (basicRateLimit - Personal_Allowance) * basicRate               + (higherRateLimit - basicRateLimit) * higherRate 
+                  + (taxableIncome - (higherRateLimit - Personal_Allowance))                  * Additional_Rate;
         }
-        return tax;
+          return tax;
     }
 }
