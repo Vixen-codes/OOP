@@ -3,8 +3,6 @@ package ProblemSet_3b;
 public class AnnualSalary {
     // Attributes
     private double salary;
-    private final double Personal_Allowance = 12570.0;
-
     private final double personalAllowance = 12570.0;
     private final double basicRateLimit = 50270.0;
     private final double higherRateLimit = 125140.0;
@@ -25,21 +23,24 @@ public class AnnualSalary {
         this.salary = salary;
     }
     public double calculateTax() {
-        double taxableIncome = salary - Personal_Allowance;
+        double taxableIncome = salary - personalAllowance;
         if (taxableIncome <= 0) {
             return 0.0;
         }
         double tax = 0.0;
-        if (taxableIncome <= (basicRateLimit - Personal_Allowance)) {
+        if (taxableIncome <= (basicRateLimit - personalAllowance)) {
             tax = taxableIncome * basicRate;
-        } else if (taxableIncome <= (higherRateLimit - Personal_Allowance)) {
-            tax = (basicRateLimit - Personal_Allowance) * basicRate
-                   + (taxableIncome - (basicRateLimit - Personal_Allowance))
+        } else if (taxableIncome <= (higherRateLimit - personalAllowance)) {
+            tax = (basicRateLimit - personalAllowance) * basicRate
+                   + (taxableIncome - (basicRateLimit - personalAllowance))
                    * higherRate;
         } else {
-            tax = (basicRateLimit - Personal_Allowance) * basicRate               + (higherRateLimit - basicRateLimit) * higherRate 
-                  + (taxableIncome - (higherRateLimit - Personal_Allowance)) * additionalRate;
-        }
-          return tax;
+            tax = (basicRateLimit - personalAllowance) * basicRate 
+            		+ (higherRateLimit - basicRateLimit) * higherRate 
+                  + (taxableIncome - 
+                		  (higherRateLimit - personalAllowance)) 
+                  * additionalRate;
+       }
+        return tax;
     }
 }
