@@ -7,7 +7,8 @@ public class Employee {
     private AnnualSalary salary;
     private Position companyPosition;
    //constructor
-   public Employee(int id, String forename, String surname, AnnualSalary salary, 
+   public Employee(int id, String forename, String surname,
+		   AnnualSalary salary,
 		   Position companyPosition) {
 	   this.id = id;
 	   this.forename = forename;
@@ -71,7 +72,7 @@ public class Employee {
 	return surname + ", " + forename + " (" + id + "): "
 			+ companyPosition.getRoleName()
             + " at £" + String.format("%.1f", salary.getSalary())
-            + " (£" + String.format("%.1f", salary.calculateTax()) 
+            + " (£" + String.format("%.1f", salary.calculateTax())
             + " tax) and "
             + bonusStatus;
    }
