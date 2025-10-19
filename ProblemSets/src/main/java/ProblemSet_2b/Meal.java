@@ -14,7 +14,7 @@ public class Meal {
    }
    @Override
    public String toString() {
-	   return "Meal [mainCourse = " + mainCourse.getName() 
+	   return "Meal [mainCourse = " + mainCourse.getName()
 			  + ", dessert = " + dessert.getName() + "]";
    }
 }
