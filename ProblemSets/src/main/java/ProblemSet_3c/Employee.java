@@ -7,8 +7,8 @@ public class Employee {
     private AnnualSalary salary;
     private Position companyPosition;
    //constructor
-   public Employee (int id, String forename, String surname
-		   , AnnualSalary salary, Position companyPosition) {
+   public Employee(int id, String forename, String surname, AnnualSalary salary, 
+		   Position companyPosition) {
 	   this.id = id;
 	   this.forename = forename;
 	   this.surname = surname;
@@ -49,8 +49,8 @@ public class Employee {
 	this.companyPosition = companyPosition;
    }
    public String getPositionName() {
-	    return companyPosition.getRoleName(); 
-	    //test calls for employee.getPositionNAme() 
+	    return companyPosition.getRoleName();
+	    //test calls for employee.getPositionNAme()
 	    //but since we dont have that we make a helpermethod
 	}
 
@@ -66,12 +66,13 @@ public class Employee {
    }
    @Override
    public String toString() {
-	String bonusStatus = eligibleForBonus() ? "is eligible for bonus"
-			: "is not eligible for bonus";
+	String bonusStatus = eligibleForBonus() ? "is eligible for bonus."
+			: "is not eligible for bonus.";
 	return surname + ", " + forename + " (" + id + "): "
-			+ companyPosition.getRoleName() +
-            " at £" + String.format("%.1f", salary.getSalary())
-            + " (£" + String.format("%.1f", salary.calculateTax()) + " tax) and "
+			+ companyPosition.getRoleName()
+            + " at £" + String.format("%.1f", salary.getSalary())
+            + " (£" + String.format("%.1f", salary.calculateTax()) 
+            + " tax) and "
             + bonusStatus;
    }
-} 
+}

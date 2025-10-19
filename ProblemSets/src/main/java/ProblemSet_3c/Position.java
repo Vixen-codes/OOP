@@ -2,7 +2,6 @@ package ProblemSet_3c;
 
 public class Position {
   private String role;
-  
   public Position() {
 	  this.role = ""; //for tests
   }
