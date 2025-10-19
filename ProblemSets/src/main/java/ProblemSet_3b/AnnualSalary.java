@@ -38,7 +38,7 @@ public class AnnualSalary {
                    * higherRate;
         } else {
             tax = (basicRateLimit - Personal_Allowance) * basicRate               + (higherRateLimit - basicRateLimit) * higherRate 
-                  + (taxableIncome - (higherRateLimit - Personal_Allowance))                  * Additional_Rate;
+                  + (taxableIncome - (higherRateLimit - Personal_Allowance)) * additionalRate;
         }
           return tax;
     }
