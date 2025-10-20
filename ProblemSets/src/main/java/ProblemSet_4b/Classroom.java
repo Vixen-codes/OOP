@@ -20,8 +20,9 @@ public class Classroom {
         if (index >= 0 && index < CAPACITY) {
 			maxStudents[index] = new Student(initial, surname);
 		} else {
-			System.out.println ("index out of range, "
-					+ "please put a value between 0-19");}
+			System.out.println("index out of range, "
+					+ "please put a value between 0-19"); 
+			}
 		      }
 		public String getSummary() {
 		    String summary = "";
@@ -29,7 +30,8 @@ public class Classroom {
 
 		    for (int i = 0; i < CAPACITY; i++) {
 		        if (maxStudents[i] != null) {
-		            summary = summary + maxStudents[i].getStudentDetails() + "\n";
+		            summary = summary
+		            		+ maxStudents[i].getStudentDetails() + "\n";
 		            count = count + 1;
 		        }
 		    }
@@ -38,7 +40,7 @@ public class Classroom {
 		    } else {
 		        return summary;
 		    }
-		}	
+		}
      //number of students surrently
 		public int howManyStudents() {
 			int count = 0;
