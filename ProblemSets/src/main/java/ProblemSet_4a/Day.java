@@ -6,10 +6,16 @@ public class Day {
      //constructor
      public Day(String name) {
     	 this.name = name;
-    	 this.sessions = new Session[9];	
+    	 this.sessions = new Session[4];	
      }
-     public void addSession(int index, String sessionName, int startTime, int endTime) {
-    	 sessions[index] = new Session(sessionName, startTime, endTime);
+     public void addSession(int index, String moduleName, int startTime, int endTime) {
+    	 sessions[index] = new Session(moduleName, startTime, endTime);
+     }
+     public Session getSessions(int index) {
+    	 return sessions[index];
+     }
+     public String getName() {
+    	 return name;
      }
      public String toString() {
     	 String result = "";
@@ -19,7 +25,8 @@ public class Day {
     			 + " - " + session.getEndTime() + " ";
     		 }
     	 }
-    	 return result;}
+    	 return result;
+    	 }
      public void display() {
     	 System.out.println("Day: " + name + " Sessions: " + toString());
      }
