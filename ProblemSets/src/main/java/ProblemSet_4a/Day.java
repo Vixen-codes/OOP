@@ -6,9 +6,10 @@ public class Day {
      //constructor
      public Day(String name) {
     	 this.name = name;
-    	 this.sessions = new Session[4];	
+    	 this.sessions = new Session[4];
      }
-     public void setSession(int index, String moduleName, int startTime, int endTime) {
+     public void setSession(int index, 
+    		 String moduleName, int startTime, int endTime) {
     	 sessions[index] = new Session(moduleName, startTime, endTime);
      }
      public Session getSessions(int index) {
@@ -21,7 +22,7 @@ public class Day {
     	 String result = "";
     	 for (Session session: sessions) {
     		 if (session != null) {
-    			 result += session.getSessionName()+ ": "
+    			 result += session.getSessionName() + ": "
     		             + session.getStartTime() + " - "
     		             + session.getEndTime() + "\n";
     		 }
