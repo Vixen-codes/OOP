@@ -8,7 +8,7 @@ public class Day {
     	 this.name = name;
     	 this.sessions = new Session[4];
      }
-     public void setSession(int index, 
+     public void setSession(int index,
     		 String moduleName, int startTime, int endTime) {
     	 sessions[index] = new Session(moduleName, startTime, endTime);
      }
