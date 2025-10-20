@@ -10,8 +10,14 @@ public class Classroom {
 		this.room = room;
 		this.maxStudents = new Student[CAPACITY];
 	}
-	public void addstudents(int index, char initial, String surname) {
-		if (index >= 0 && index< CAPACITY) {
+	public String getRoom() {
+        return room;
+    }
+    public int getCapacity() {
+        return CAPACITY;
+    }
+    public void addStudents(int index, char initial, String surname) {
+        if (index >= 0 && index < CAPACITY) {
 			maxStudents[index] = new Student(initial, surname);
 		} else {
 			System.out.println ("index out of range, "
@@ -27,7 +33,6 @@ public class Classroom {
 		            count = count + 1;
 		        }
 		    }
-
 		    if (count == 0) {
 		        return "No students added";
 		    } else {
