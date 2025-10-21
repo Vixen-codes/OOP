@@ -4,7 +4,7 @@ public class Module {
 	private String code;
 	private double average;
 	
-  public Module(String code, Double average) {
+  public Module(String code, double average) {
 	  this.code = code;
 	  this.average = average;
   }
