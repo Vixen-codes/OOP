@@ -43,8 +43,8 @@ public class RainfallYear {
             }
 		return sum / rainfallMonths.length;
 		}
-	 public double getRainfallMonth(String Month) {
-		 switch (Month.toLowerCase()) {
+	 public double getRainfallMonth(String month) {
+		 switch (month.toLowerCase()) {
 		case "january":
 			return rainfallMonths[0];
 		case "february":
