@@ -14,14 +14,14 @@ public class RainfallYear {
 	 public void enterData(double[] data) {
 		// TODO Auto-generated method stub
 		 if (data != null) {
-		 for (int i = 0; i < rainfallMonths.length && i < data.length; i++) {
-              rainfallMonths[i]	= data[i];		 
+		 for (int i = 0; i < rainfallMonths.length &&
+				 i < data.length; i++) {
+              rainfallMonths[i]	= data[i];
 		 }
 	 }
 	 }
 	 public double calculateHighestRainfall() {
 		double highest = 0;
-		
 		for (double rainfall : rainfallMonths) {
 			if (rainfall > highest) {
 				highest = rainfall;
@@ -32,7 +32,7 @@ public class RainfallYear {
 	 public double calculateMeanRainfall() {
 		double sum = 0;
 		int count = 0;
-		for (double rainfall : rainfallMonths) {//enhanced for loop 
+		for (double rainfall : rainfallMonths) { 
             if (rainfall > 0) {
             	sum += rainfall;
                 count++;
@@ -44,7 +44,7 @@ public class RainfallYear {
 		return sum / rainfallMonths.length;
 		}
 	 public double getRainfallMonth(String Month) {
-		switch(Month.toUpperCase()) {
+		 switch (Month.toUpperCase()) {
 		case "JANUARY":
 			return rainfallMonths[0];
 		case "FEBRUARY":
