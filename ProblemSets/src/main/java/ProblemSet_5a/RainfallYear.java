@@ -13,7 +13,7 @@ public class RainfallYear {
      }
 	 public void enterData(double[] data) {
 		// TODO Auto-generated method stub
-		 if (data != null && data.length == rainfallMonths.length) {
+		 if (data != null) {
 		 for (int i = 0; i < rainfallMonths.length && i < data.length; i++) {
               rainfallMonths[i]	= data[i];		 
 		 }
@@ -32,9 +32,9 @@ public class RainfallYear {
 	 public double calculateMeanRainfall() {
 		double sum = 0;
 		int count = 0;
-		for (double rainfall : rainfallMonths) {  //enhanced for loop,learnt from youtube, what can i say?
-            sum += rainfall; //i know, fancy...
+		for (double rainfall : rainfallMonths) {//enhanced for loop 
             if (rainfall > 0) {
+            	sum += rainfall;
                 count++;
             }
 		}
@@ -45,29 +45,29 @@ public class RainfallYear {
 		}
 	 public double getRainfallMonth(String Month) {
 		switch(Month.toUpperCase()) {
-		case "January":
+		case "JANUARY":
 			return rainfallMonths[0];
-		case "Febuary":
+		case "FEBRUARY":
 			return rainfallMonths[1];
-		case "March":
+		case "MARCH":
 			return rainfallMonths[2];
-		case "April":
+		case "APRIL":
 			return rainfallMonths[3];
-		case "May":
+		case "MAY":
 			return rainfallMonths[4];
-		case "June":
+		case "JUNE":
 			return rainfallMonths[5];
-		case "July":
+		case "JULY":
 			return rainfallMonths[6];
-		case "August":
+		case "AUGUST":
 			return rainfallMonths[7];
-		case "September":
+		case "SEPTEMBER":
 			return rainfallMonths[8];
-		case "October":
+		case "OCTOBER":
 			return rainfallMonths[9];
-		case "November":
+		case "NOVEMBER":
 			return rainfallMonths[10];
-		case "December":
+		case "DECEMBER":
 			return rainfallMonths[11];
 	    default:
 		 return 0;
