@@ -14,7 +14,7 @@ public class RainfallYear {
 	 public void enterData(double[] data) {
 		// TODO Auto-generated method stub
 		 if (data != null) {
-		 for (int i = 0; i < rainfallMonths.length && i 
+		 for (int i = 0; i < rainfallMonths.length && i
 				 < data.length; i++) {
               rainfallMonths[i]	= data[i];
 		 }
