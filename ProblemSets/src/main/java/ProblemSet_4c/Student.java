@@ -5,7 +5,7 @@ public class Student {
    private String surname;
    private Module[] modules;
    //constructor(paramertised)
-  public Student(char initial, String surname) { 
+  public Student(char initial, String surname) {
    this.initial = initial;
    this.surname = surname;
    this.modules = new Module[8];
@@ -21,7 +21,8 @@ public class Student {
 	    return (int) (total / modules.length);
 	}
   public String getStudentDetails() {
-	    return initial + ". " + surname + " " + calculateYearAverage() + "%";
+	    return initial + ". " + surname + " "
+                       + calculateYearAverage() + "%";
 	}
   //get modules
   public Module getModules(int index) {

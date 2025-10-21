@@ -3,7 +3,7 @@ package ProblemSet_4c;
 public class Module {
 	private String code;
 	private double average;
-	
+
   public Module(String code, double average) {
 	  this.code = code;
 	  this.average = average;
@@ -14,7 +14,7 @@ public class Module {
   public double getAverage() {
 	  return average;
   }
-  public void setAverage (double average) {
+  public void setAverage(double average) {
 	  this.average = average;
   }
   public String getCode() {
