@@ -25,7 +25,7 @@ public class GasBill {
     }
 
     public String getCustomer() {
-        return customer.getName().charAt(0) + ". " + customer.getSurname();
+        return customer.toString();
     }
 
     public String displayAmountDue() {

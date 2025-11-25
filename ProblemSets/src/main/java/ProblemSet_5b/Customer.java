@@ -10,8 +10,8 @@ public class Customer {
         this.surname = surname;
     }
 
-    public String getName() {
-        return name;
+    public char getName() {
+        return name.charAt(0);
     }
 
     public String getSurname() {
