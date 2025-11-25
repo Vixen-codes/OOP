@@ -7,7 +7,7 @@ public class Module {
 
     // parameterised constructor
     public Module(String name) {
-        if (name != null && name.matches("^COM[0-9]{4}$")){
+        if (name != null && name.matches("^COM[0-9]{4}$")) {
             this.name = name;
         } else {
             this.name = "Error";
