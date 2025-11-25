@@ -13,7 +13,6 @@ public class Pizza {
     	  for (int i = 0; i < toppings.length && i < this.toppings.length; i++) {
     		  this.toppings[i] = toppings[i];
     	  }
-    	  calculateCost();
       }
 
       public String printToppings() {
@@ -30,40 +29,32 @@ public class Pizza {
 
     	        return result.toString();
           }
-      public void calculateCost() {
+      public double calculateCost() {
           int count = getNumberOfToppings();
 
           switch (count) {
-              case 0:
-                  cost = 0;
+              case 0: cost = 0;
                   break;
-              case 1:
-                  cost = 9.99;
+              case 1: cost = 9.99;
                   break;
               case 2:
-              case 3:
-                  cost = 10.99;
+              case 3: cost = 10.99;
                   break;
               case 4:
-              case 5:
-                  cost = 11.99;
+              case 5: cost = 11.99;
                   break;
-              case 6:
-                  cost = 12.99;
+              case 6: cost = 12.99;
                   break;
-              case 7:
-                  cost = 13.99;
+              case 7: cost = 13.99;
                   break;
-              case 8:
-                  cost = 14.99;
+              case 8: cost = 14.99;
                   break;
-              case 9:
-                  cost = 15.99;
+              case 9: cost = 15.99;
                   break;
-              case 10:
-                  cost = 14.99; // special offer
+              case 10:cost = 14.99; // special offer
                   break;
           }
+          return cost;
       }
     public int getNumberOfToppings() {
     	int count = 0;
