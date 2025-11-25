@@ -33,9 +33,9 @@ public class GasBill {
     }
 
     public String displayAccountDetails() {
-        return "Gas Bill\n" +
-               " Account Number:" + accountNumber + "\n" +
-               " Customer:" + getCustomer() + "\n" +
-               " Amount due:" + displayAmountDue();
+        return "Gas Bill\n"
+               + " Account Number:" + accountNumber + "\n"
+              + " Customer:" + getCustomer() + "\n"
+               + " Amount due:" + displayAmountDue();
     }
 }
