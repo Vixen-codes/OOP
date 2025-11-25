@@ -77,4 +77,7 @@ public class Pizza {
     public String[] getToppings() {
     	return toppings;
     }
+    public double getCost() {
+        return cost;
+    }
 }
