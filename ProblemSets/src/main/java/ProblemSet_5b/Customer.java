@@ -17,4 +17,8 @@ public class Customer {
     public String getSurname() {
         return surname;
     }
+    @Override
+    public String toString() {
+        return name.charAt(0) + "" + ". " + surname;
+    }
 }
