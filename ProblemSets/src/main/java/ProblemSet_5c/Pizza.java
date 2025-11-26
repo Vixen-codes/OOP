@@ -5,7 +5,7 @@ public class Pizza {
     // Default constructor
     public Pizza() {
         this.toppings = new String[10];
-    } 
+    }
     // Add toppings method
     public void addToppings(String[] toppings) {
         // Reset the array first

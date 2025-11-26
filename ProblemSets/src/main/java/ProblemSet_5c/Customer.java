@@ -12,7 +12,7 @@ public class Customer {
     public String getName() {
         return name;
     }
-  
+
     public String getSurname() {
         return surname;
     }
