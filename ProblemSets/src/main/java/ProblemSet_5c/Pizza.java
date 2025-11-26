@@ -1,74 +1,79 @@
 package ProblemSet_5c;
 
 public class Pizza {
-      private String[] toppings;
-      private double cost;
-      
-      public Pizza() {
-    	  toppings = new String[10];
-    	  cost = 0;
-      }
-      
-      public void addToppings(String[] toppings) {
-    	  for (int i = 0; i < toppings.length && i < this.toppings.length; i++) {
-    		  this.toppings[i] = toppings[i];
-    	  }
-      }
-
-      public String printToppings() {
-    	        StringBuilder result = new StringBuilder();
-
-    	        for (int i = 0; i < toppings.length; i++) {
-    	            if (toppings[i] != null) {
-    	                if (result.length() > 0) {
-    	                    result.append(",");
-    	                }
-    	                result.append(toppings[i]);
-    	            }
-    	        }
-
-    	        return result.toString();
-          }
-      public double calculateCost() {
-          int count = getNumberOfToppings();
-
-          switch (count) {
-              case 0: cost = 0;
-                  break;
-              case 1: cost = 9.99;
-                  break;
-              case 2:
-              case 3: cost = 10.99;
-                  break;
-              case 4:
-              case 5: cost = 11.99;
-                  break;
-              case 6: cost = 12.99;
-                  break;
-              case 7: cost = 13.99;
-                  break;
-              case 8: cost = 14.99;
-                  break;
-              case 9: cost = 15.99;
-                  break;
-              case 10:cost = 14.99; // special offer
-                  break;
-          }
-          return cost;
-      }
-    public int getNumberOfToppings() {
-    	int count = 0;
-    	for (String t : toppings) {
-    		if (t!=null) {
-    			count++;
-    		}
-    	}
-    	return count;
+    private String[] toppings;
+    
+    // Default constructor
+    public Pizza() {
+        this.toppings = new String[10];
     }
-    public String[] getToppings() {
-    	return toppings;
+    
+    // Add toppings method
+    public void addToppings(String[] toppings) {
+        // Reset the array first
+        this.toppings = new String[10];
+        
+        // Copy toppings, ensuring we don't exceed the limit of 10
+        if (toppings != null) {
+            for (int i = 0; i < toppings.length && i < 10; i++) {
+                this.toppings[i] = toppings[i];
+            }
+        }
     }
-    public double getCost() {
-        return cost;
+    
+    // Print toppings method
+    public String printToppings() {
+        StringBuilder result = new StringBuilder();
+        boolean first = true;
+        
+        for (int i = 0; i < this.toppings.length; i++) {
+            if (this.toppings[i] != null) {
+                if (!first) {
+                    result.append(",");
+                }
+                result.append(this.toppings[i]);
+                first = false;
+            }
+        }
+        
+        return result.toString();
+    }
+    
+    // Calculate cost method
+    public double calculateCost() {
+        int count = 0;
+        
+        // Count non-null toppings
+        for (int i = 0; i < this.toppings.length; i++) {
+            if (this.toppings[i] != null) {
+                count++;
+            }
+        }
+        
+        // Calculate cost based on number of toppings
+        switch (count) {
+            case 0:
+                return 0.00;
+            case 1:
+                return 9.99;
+            case 2:
+            case 3:
+                return 10.99;
+            case 4:
+            case 5:
+                return 11.99;
+            case 6:
+                return 12.99;
+            case 7:
+                return 13.99;
+            case 8:
+                return 14.99;
+            case 9:
+                return 15.99;
+            case 10:
+                return 14.99; // special offer
+            default:
+                return 0.00;
+        }
     }
 }
