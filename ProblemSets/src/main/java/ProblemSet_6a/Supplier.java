@@ -11,19 +11,14 @@ public class Supplier {
 	        this.phone = phone;
 	    }
 	    private boolean isValidPhone(String phone) {
-	        // Valid formats: "01483-123456" or "01483123456"
 	        if (phone == null) {
 	            return false;
 	        }
-	        // Check for format with dash: 01483-123456
-	        if (phone.matches("01483-\\d{6}")) {
-	            return true;
-	        }
-	        // Check for format without dash: 01483123456
-	        if (phone.matches("01483\\d{6}")) {
-	            return true;
-	        }
-	        return false;
+	        // Remove any dash that might be there
+	        String digits = phone.replace("-", "");
+	        
+	        // Must be exactly 11 digits and start with 01483
+	        return digits.matches("01483\\d{6}");
 	    }
 	    public String getName() {
 	        return name;

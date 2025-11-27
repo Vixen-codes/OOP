@@ -27,5 +27,8 @@ public class Ingredient {
     public double getCookedWeight() {
         return rawWeight * 0.8;
     }
+    @Override
+    public String toString() {
+        return name + " from " + supplier.toString();
+    }
 }
-
