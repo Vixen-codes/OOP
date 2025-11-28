@@ -79,4 +79,8 @@ public class Student {
       }
       return result.toString();
   }
+  @Override
+  public String toString() {
+      return name + "(" + urn + ")";
+  }
 }
