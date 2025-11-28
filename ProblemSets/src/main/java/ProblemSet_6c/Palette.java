@@ -1,9 +1,5 @@
 package ProblemSet_6c;
-
-import ProblemSet_6b.P_COLOUR;
-
 public class Palette {
-	public class Palette {
 	    private P_COLOUR[] primaryColours;
 
 	    public Palette() {
