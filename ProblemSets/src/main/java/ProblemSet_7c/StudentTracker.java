@@ -35,12 +35,8 @@ public class StudentTracker {
 	        return "";
 	    }
 	    StringBuilder result = new StringBuilder();
-	    for (int i = 0; i < studentList.size(); i++) {
-	        if (i > 0) {
-	            result.append("\n");  // Only add newline BEFORE items after the first
-	        }
-	        result.append(studentList.get(i).toString());
-	        result.append("\n");
+	    for (Student student : studentList) {
+	        result.append(student.toString()).append("\n");
 	    }
 	    return result.toString();
 	}
