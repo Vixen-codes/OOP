@@ -40,6 +40,7 @@ public class StudentTracker {
 	            result.append("\n");  // Only add newline BEFORE items after the first
 	        }
 	        result.append(studentList.get(i).toString());
+	        result.append("\n");
 	    }
 	    return result.toString();
 	}
