@@ -31,18 +31,18 @@ public class StudentTracker {
    }
    // Print all students in the student list
    public String printStudents() {
-       if (studentList.isEmpty()) {
-           return "";
-       }
-       StringBuilder result = new StringBuilder();
-       for (int i = 0; i < studentList.size(); i++) {
-           result.append(studentList.get(i).toString());
-           if (i < studentList.size() - 1) {
-               result.append("\n");
-           }
-       }
-       return result.toString();
-   }
+	    if (studentList.isEmpty()) {
+	        return "";
+	    }
+	    StringBuilder result = new StringBuilder();
+	    for (int i = 0; i < studentList.size(); i++) {
+	        if (i > 0) {
+	            result.append("\n");  // Only add newline BEFORE items after the first
+	        }
+	        result.append(studentList.get(i).toString());
+	    }
+	    return result.toString();
+	}
    // Print all modules for a given URN
    public String printModules(int urn) {
        // Make sure the map is up to date
@@ -54,7 +54,7 @@ public class StudentTracker {
        }
        // Format the output
        StringBuilder result = new StringBuilder();
-       result.append("URN ").append(urn).append(" is enrolled in:\n\n");
+       result.append("URN ").append(urn).append(" is enrolled in:\n");
        result.append(student.printModules());
        return result.toString();
 }
