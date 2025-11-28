@@ -7,7 +7,6 @@ public class Student {
   private String name;
   private String urn;
   private List<Module> moduleList;
-  
   public Student(String name, String urn) {
 	  this.name = formatName(name);
 	  this.urn = validateUrn(urn);
@@ -50,7 +49,7 @@ public class Student {
   public void addModuleList(Module module) {
       if (module == null) {
           return;
-      }   
+      }
       // Check if module already exists
       if (!moduleExists(module)) {
           moduleList.add(module);
@@ -69,7 +68,7 @@ public class Student {
   public String printModules() {
       if (moduleList.isEmpty()) {
           return "";
-      }   
+      }
       StringBuilder result = new StringBuilder();
       for (int i = 0; i < moduleList.size(); i++) {
           result.append(moduleList.get(i).getName());
