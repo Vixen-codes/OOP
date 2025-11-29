@@ -16,8 +16,7 @@ public class Counting {
             while ((line = reader.readLine()) != null) {
                 counter++;
                 result.append(displayLine(line, counter));
-                result.append("\n");               // always add newline after EVERY line
-            }
+                result.append("\n");                        }
         } catch (IOException e) {
             System.err.println("Error reading file: " + e.getMessage());
         }

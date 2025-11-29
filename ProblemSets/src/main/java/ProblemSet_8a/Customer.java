@@ -20,7 +20,7 @@ public class Customer {
 	    }
 	public void setSurname(String surname) {
 		if (!validateInfo(surname)) {
-			throw new IllegalArgumentException("Surname must start with a capital letter and rest of it can be lowercase");
+			throw new IllegalArgumentException("Surname must start with a capital letter followed by lowercase letters only.");
 		}
 		this.surname = surname;
 	}
