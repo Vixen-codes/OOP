@@ -45,10 +45,12 @@ public class PersonTracker {
         Person person = new Person(n, s, a);
         peopleList.add(person);
     }
-    public void displayList() {
-        for (Person person : peopleList) {
-            System.out.println(person.toString());
+    public String displayList() {
+        StringBuilder sb = new StringBuilder();
+        for (Person p : peopleList) {
+            sb.append(p.toString()).append("\n");
         }
+        return sb.toString();
     }
     public String getPeopleList() {
         StringBuilder result = new StringBuilder();
