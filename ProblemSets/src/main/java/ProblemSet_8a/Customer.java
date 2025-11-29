@@ -15,6 +15,15 @@ public class Customer {
 	public char getName() {
 		return name.charAt(0);
 	}
+	public String getSurname() {
+	        return surname;
+	    }
+	public void setSurname(String surname) {
+		if (!validateInfo(surname)) {
+			throw new IllegalArgumentException("Surname must start with a capital letter and rest of it can be lowercase");
+		}
+		this.surname = surname;
+	}
 	public boolean validateInfo(String info) {
 		if (info == null || info.isEmpty()) {
 		return false;
@@ -23,6 +32,6 @@ public class Customer {
 	}
 	@Override
 	public String toString() {
-		return getName()+ ". " + surname;
+		return getName()+ ". " + getSurname();
 	}
 }
