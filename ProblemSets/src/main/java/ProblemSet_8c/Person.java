@@ -10,6 +10,15 @@ public class Person {
 	   this.surname = surname;
 	   this.age = age;
    }
+   public String getForename() {
+	return forename;
+   }
+   public String getSurname() {
+	return surname;
+   }
+   public int getAge() {
+	return age;
+   }
    @Override
    public String toString() {
 	   return forename + " " + surname + " (" + age + ")";
