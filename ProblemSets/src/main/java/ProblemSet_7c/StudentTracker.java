@@ -10,7 +10,7 @@ public class StudentTracker {
    private Map<Integer, Student> moduleList;
    public StudentTracker() {
 	   this.studentList = new ArrayList<>();
-	   this.moduleList =new HashMap <>();
+	   this.moduleList = new HashMap<>();
    }
    public void addStudent(Student student, List<Module> mList) {
        if (student == null || mList == null) {
@@ -24,7 +24,7 @@ public class StudentTracker {
    }
    private void initialiseMap() {
        // Clear the map and rebuild it from the student list
-       moduleList.clear();   
+       moduleList.clear();
        for (Student student : studentList) {
            moduleList.put(student.getUrn(), student);
        }
