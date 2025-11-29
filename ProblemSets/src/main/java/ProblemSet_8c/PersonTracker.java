@@ -12,13 +12,12 @@ public class PersonTracker {
     	this.peopleList = new ArrayList<>();
     }
      public String readTextFile(String file) {
-        StringBuilder content = new StringBuilder(); 
-        
+        StringBuilder content = new StringBuilder();
     	try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
     		String line;
     		while ((line = reader.readLine()) != null) {
                 content.append(line).append("\n");  
-                breakLine(line);                    
+                breakLine(line);
             }
         } catch (IOException e) {
             System.err.println("Error reading file: " + e.getMessage());
