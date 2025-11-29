@@ -29,9 +29,9 @@ public class Customer {
 	}
 	public boolean validateInfo(String info) {
 		if (info == null || info.isEmpty()) {
-		return false;
+			return false;
 		}
-	return info.matches("[A-Z][a-z]+$");
+		return info.matches("[A-Z][a-z]*$");
 	}
 	@Override
 	public String toString() {

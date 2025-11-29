@@ -16,7 +16,7 @@ public class PersonTracker {
     	try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
     		String line;
     		while ((line = reader.readLine()) != null) {
-                content.append(line).append("\n");  
+                content.append(line).append("\n");
                 breakLine(line);
             }
         } catch (IOException e) {
@@ -26,7 +26,7 @@ public class PersonTracker {
     }
        private void breakLine(String line) {
         if (line == null || line.trim().isEmpty()) {
-            return; 
+            return;
             }
         String[] parts = line.trim().split("\\s+");
         if (parts.length >= 3) {
