@@ -53,13 +53,17 @@ public class PersonTracker {
         return sb.toString();
     }
     public String getPeopleList() {
-        StringBuilder result = new StringBuilder();
-        for (Person person : peopleList) {
-            result.append(person.toString()).append("\n");
+        if (peopleList.isEmpty()) {
+            return "[]";
         }
-        if (result.length() > 0) {
-            result.setLength(result.length() - 1);
+        StringBuilder result = new StringBuilder("[");
+        for (int i = 0; i < peopleList.size(); i++) {
+            result.append(peopleList.get(i).toString());
+            if (i < peopleList.size() - 1) {
+                result.append(", ");
+            }
         }
+        result.append("]");
         return result.toString();
-           }
+    }
 }
