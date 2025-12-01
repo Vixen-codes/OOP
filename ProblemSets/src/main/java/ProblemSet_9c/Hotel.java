@@ -17,7 +17,8 @@ public class Hotel {
    }
      public void addGuest(IGuest guest) {
 	   if (guest != null) {
-           guests.add(guest);	   }
+           guests.add(guest);	   
+           }
    }
    public String printGuestList() {
 	   StringBuilder output = new StringBuilder();
