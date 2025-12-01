@@ -8,10 +8,10 @@ public class Service {
 	   if (code == null || name == null || rate == null) {
 		   throw new IllegalArgumentException("Parameters can't be null");
 	  }
+	   validateCode(code);
 	   this.code = code;
 	   this.name = name;
 	   this.rate = rate;
-   validateCode(code);
    }
    private void validateCode(String code) {
    if (code.length()!=9) {
@@ -28,7 +28,7 @@ public class Service {
    }
    public String getCode() {
 	return code;
-   }}
+   }
    public VATRate getRate() {
 	return rate;
    }
