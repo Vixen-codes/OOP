@@ -8,8 +8,9 @@ public class Charge {
     	if (service == null) {
     		throw new IllegalArgumentException("Service cannot be null");
     }
-    	if (charge <=0) {
-    		throw new IllegalArgumentException("Charge must be greater than zero");
+    	if (charge <= 0) {
+    		throw new IllegalArgumentException("Charge must be greater "
+    				+ "than zero");
     	}
     	this.service = service;
     	this.charge = charge;
