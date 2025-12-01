@@ -9,7 +9,7 @@ public class Guest {
   private String address;
   private String telephone;
   private List<Charge> charges;
-  public Guest(String forename, String surname, 
+  public Guest(String forename, String surname,
 		  String address, String telephone) {
 	  this.surname = surname;
 	  this.forename = forename;
@@ -29,7 +29,7 @@ public class Guest {
    public String getTelephone() {
 	   return telephone;
    }
-   public List < Charge > getCharges() {
+   public List<Charge> getCharges() {
 	   return charges;
    }
     public void addCharge(Service s, double c) {

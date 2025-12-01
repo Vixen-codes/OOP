@@ -14,11 +14,9 @@ public class Palette {
 	        }
 	    }
 	    public void addColour(P_COLOUR colour) {
-	        // Check if colour already exists
 	        for (int i = 0; i < primaryColours.length; i++) {
 	            if (primaryColours[i] == colour) {
-	                return; // Colour already exists, don't add
-	            }
+	                return; }
 	        }
 	        for (int i = 0; i < primaryColours.length; i++) {
 	            if (primaryColours[i] == null) {
@@ -26,7 +24,7 @@ public class Palette {
 	                return;
 	            }
 	        }
-	        throw new IllegalStateException("Cannot add more than 3 colours");
+	        throw new IllegalArgumentException("Cannot add more than 3 colours");
 	    }
 	    public String getColours() {
 	    StringBuilder result = new StringBuilder();
@@ -41,7 +39,7 @@ public class Palette {
 	     }
 	     }
 	      if (!hasColours) {
-	        return "No colours added";
+	        return "";
 	        }
 	        return result.toString();
 	    }
@@ -81,24 +79,15 @@ public class Palette {
 	                return "PURPLE";
 	            }
 	        }
-	        
 	        return "No colours added";
 	    }
-	    
 	    public String display() {
 	        StringBuilder result = new StringBuilder();
-	        
-	        // Get the colours string
-	        String coloursString = getColours();
-	        
-	        // Get the mixed colour
+	       	        String coloursString = getColours();
 	        String mixedColour = mixColours();
-	        
-	        // Format as: BLUE, YELLOW = GREEN
 	        result.append(coloursString);
 	        result.append(" = ");
 	        result.append(mixedColour);
-	        
 	        return result.toString();
 	    }
 	 }
