@@ -14,10 +14,7 @@ public class Supplier {
 	        if (phone == null) {
 	            return false;
 	        }
-	        // Remove any dash that might be there
 	        String digits = phone.replace("-", "");
-	        
-	        // Must be exactly 11 digits and start with 01483
 	        return digits.matches("01483\\d{6}");
 	    }
 	    public String getName() {

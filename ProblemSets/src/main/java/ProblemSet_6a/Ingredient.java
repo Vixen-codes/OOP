@@ -18,8 +18,8 @@ public class Ingredient {
     public IngredientType getType() {
         return type;
     }
-    public Supplier getSupplier() {
-        return supplier;
+    public String getSupplier() {
+        return supplier.toString();
     }
     public double getRawWeight() {
         return rawWeight;

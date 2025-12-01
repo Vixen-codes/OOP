@@ -12,8 +12,8 @@ public class Guest {
   
   public Guest(String forename, String surname, String address, String telephone) {
 	  this.surname = surname;
-	  this.surname = surname;
-	  this.address = telephone;
+	  this.forename = forename;
+	  this.address = address;
 	  this.telephone = telephone;
 	  this.charges = new ArrayList<>();
   }
@@ -37,8 +37,7 @@ public class Guest {
 	   charges.add(charge);
    }
    private Charge newCharge(Service s, double c) {
-		// TODO Auto-generated method stub
-		return null;
+		return new Charge(s,c);
 	}
    public double calculateTotalChargeWithoutVAT() {
 	   double total = 0.0;
