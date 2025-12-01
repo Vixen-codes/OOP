@@ -5,21 +5,21 @@ public class Service {
    private VATRate rate;
    private String name;
    public Service(String code,String name, VATRate rate) {
-	   validateCode(code);
+	   if (code == null) {
+			throw new NullPointerException("code cant be null");
+			   }
 	   if (name == null) {
 		   throw new NullPointerException("name cant be null");
 		   }
 	   if (rate == null) {
 		   throw new NullPointerException("rate cant be null");
 	   }
+	   validateCode(code);
 	   this.code = code;
 	   this.name = name;
 	   this.rate = rate;
    }
    private void validateCode(String code) {
-   if (code == null) {
-	throw new NullPointerException("code cant be null");
-	   }
    if (code.length()!=9) {
 	throw new IllegalArgumentException("code must be 9 characters long");
    }
