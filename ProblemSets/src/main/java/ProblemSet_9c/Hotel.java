@@ -1,6 +1,5 @@
 package ProblemSet_9c;
 
-import java.util.List;
 import java.util.ArrayList;
 
 public class Hotel {
@@ -10,7 +9,13 @@ public class Hotel {
 	   this.name = name;
 	   this.guests = new ArrayList<IGuest>();
    }
-   public void addGuest(IGuest guest) {
+   public String getName() {
+       return name;
+   }
+       public ArrayList<IGuest> getGuests() {
+       return guests;
+   }
+     public void addGuest(IGuest guest) {
 	   if (guest != null) {
            guests.add(guest);	   }
    }
