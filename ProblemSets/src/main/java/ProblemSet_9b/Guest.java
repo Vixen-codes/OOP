@@ -54,7 +54,6 @@ public class Guest {
 	   }
 	   return total;
    }
-   @Override
    public double calculateVATChargeAtRate(VATRate r) {
 	   double totalVAT = 0.0;
 	   for (Charge charge : charges) {
