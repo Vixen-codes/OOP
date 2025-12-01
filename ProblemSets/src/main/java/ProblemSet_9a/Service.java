@@ -7,10 +7,10 @@ public class Service {
    public Service(String code,String name, VATRate rate) {
 	   validateCode(code);
 	   if (name == null) {
-		   throw new IllegalArgumentException("name can't be null");
-	   }
+		   throw new NullPointerException("name cant be null");
+		   }
 	   if (rate == null) {
-		   throw new IllegalArgumentException("rate cant be null");
+		   throw new NullPointerException("rate cant be null");
 	   }
 	   this.code = code;
 	   this.name = name;
@@ -18,7 +18,7 @@ public class Service {
    }
    private void validateCode(String code) {
    if (code == null) {
-	throw new IllegalArgumentException("code cant be null");
+	throw new NullPointerException("code cant be null");
 	   }
    if (code.length()!=9) {
 	throw new IllegalArgumentException("code must be 9 characters long");
