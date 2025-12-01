@@ -9,8 +9,8 @@ public class Guest {
   private String address;
   private String telephone;
   private List<Charge> charges;
-  
-  public Guest(String forename, String surname, String address, String telephone) {
+  public Guest(String forename, String surname, 
+		  String address, String telephone) {
 	  this.surname = surname;
 	  this.forename = forename;
 	  this.address = address;
@@ -29,19 +29,19 @@ public class Guest {
    public String getTelephone() {
 	   return telephone;
    }
-   public List <Charge> getCharges(){
+   public List < Charge > getCharges() {
 	   return charges;
    }
     public void addCharge(Service s, double c) {
-	   Charge charge = newCharge(s,c);
+	   Charge charge = newCharge(s, c);
 	   charges.add(charge);
    }
    private Charge newCharge(Service s, double c) {
-		return new Charge(s,c);
+		return new Charge(s, c);
 	}
    public double calculateTotalChargeWithoutVAT() {
 	   double total = 0.0;
-	   for (Charge charge : charges){
+	   for (Charge charge : charges) {
 		   total += charge.getCharge();
 	   }
 	   return total;
@@ -64,6 +64,6 @@ public class Guest {
    }
    @Override
    public String toString() {
-	   return forename + " " + surname + ", " + address +", " + telephone;
+	   return forename + " " + surname + ", " + address + ", " + telephone;
    }
    }
