@@ -28,7 +28,8 @@ public class Palette {
 				return;
 			}
 		}
-		throw new IllegalStateException("Cannot add more than 3 colours");
+		throw new IllegalStateException("Cannot add more "
+				+ "than 3 colours");
 	}
 
 	public String getColours() {

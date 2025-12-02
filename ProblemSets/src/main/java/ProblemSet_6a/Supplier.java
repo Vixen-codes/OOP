@@ -4,9 +4,11 @@ public class Supplier {
 	private String name;
 	private String phone;
 
-	public Supplier(String name, String phone) throws IllegalArgumentException {
+	public Supplier(String name, String phone)
+			throws IllegalArgumentException {
 		if (!isValidPhone(phone)) {
-			throw new IllegalArgumentException("Invalid " + "phone number");
+			throw new IllegalArgumentException("Invalid " 
+		+ "phone number");
 		}
 		this.name = name;
 		this.phone = phone;

@@ -21,9 +21,9 @@ public class Student {
 		String[] words = name.trim().split("\\s+");
 		StringBuilder formatted = new StringBuilder();
 		for (int i = 0; i < words.length; i++) {
-			if (words[i].length() > 0) {
-				formatted.append(Character.toUpperCase(words[i].charAt(0)));
-				formatted.append(words[i].substring(1).toLowerCase());
+  if (words[i].length() > 0) {
+	formatted.append(Character.toUpperCase(words[i].charAt(0)));
+		formatted.append(words[i].substring(1).toLowerCase());
 				if (i < words.length - 1) {
 					formatted.append(" ");
 				}
@@ -49,7 +49,8 @@ public class Student {
 
 	public void addModuleList(Module module) {
 		if (module == null) {
-		}
+		 return;
+		 }
 		if (!moduleExists(module)) {
 			moduleList.add(module);
 		}
