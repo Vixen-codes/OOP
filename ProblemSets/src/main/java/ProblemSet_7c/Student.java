@@ -42,9 +42,6 @@ public class Student {
       return name;
   }
   public void addModuleList(Module module) {
-      if (module == null) {
-          return;
-      }
       if (!moduleExists(module)) {
           moduleList.add(module);
       }
@@ -64,7 +61,6 @@ public class Student {
       StringBuilder result = new StringBuilder();
       for (int i = 0; i < moduleList.size(); i++) {
           result.append(moduleList.get(i).getName());
-          // Add comma and space if not the last element
           if (i < moduleList.size() - 1) {
               result.append(", ");
           }
