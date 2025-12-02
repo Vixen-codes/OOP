@@ -16,7 +16,8 @@ public class Palette {
 	    public void addColour(P_COLOUR colour) {
 	        for (int i = 0; i < primaryColours.length; i++) {
 	            if (primaryColours[i] == colour) {
-	                return; }
+	               throw new IllegalArgumentException("Colour already exists in palette");
+	            }
 	        }
 	        for (int i = 0; i < primaryColours.length; i++) {
 	            if (primaryColours[i] == null) {
