@@ -39,7 +39,7 @@ public class Palette {
 				return;
 			}
 		}
-		throw new IllegalArgumentException("Cannot " 
+		throw new IllegalArgumentException("Cannot "
 		+ "add more than 3 colours");
 	}
 
@@ -69,14 +69,14 @@ public class Palette {
 		for (int i = 0; i < primaryColours.length; i++) {
 			if (primaryColours[i] != null) {
 				count++;
-				if (primaryColours[i] ==
-						P_COLOUR.RED) {
+				if (primaryColours[i]
+					== P_COLOUR.RED) {
 					hasRed = true;
-				} else if (primaryColours[i] ==
-						P_COLOUR.YELLOW) {
+				} else if (primaryColours[i]
+					==	P_COLOUR.YELLOW) {
 					hasYellow = true;
-				} else if (primaryColours[i] ==
-						P_COLOUR.BLUE) {
+				} else if (primaryColours[i]
+					==	P_COLOUR.BLUE) {
 					hasBlue = true;
 				}
 			}

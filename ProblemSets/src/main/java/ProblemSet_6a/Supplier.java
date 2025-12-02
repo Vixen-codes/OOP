@@ -7,7 +7,7 @@ public class Supplier {
 	public Supplier(String name, String phone)
 			throws IllegalArgumentException {
 		if (!isValidPhone(phone)) {
-			throw new IllegalArgumentException("Invalid " 
+			throw new IllegalArgumentException("Invalid "
 		+ "phone number");
 		}
 		this.name = name;
