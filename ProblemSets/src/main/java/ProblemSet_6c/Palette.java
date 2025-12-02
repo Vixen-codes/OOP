@@ -46,7 +46,7 @@ public class Palette {
 	    public String mixColours() {
 	    	int count = 0;
 	    	boolean hasRed = false;
-	    	boolean hasYellow = false;
+	    	 boolean hasYellow = false;
 	    	boolean hasBlue = false;
 	        for (int i = 0; i < primaryColours.length; i++) {
 	        	if (primaryColours[i] != null) {
@@ -59,6 +59,9 @@ public class Palette {
 	        			hasBlue = true;
 	        		}
 	        	}
+	        }
+	        if (count == 0) {
+	        	return "";
 	        }
 	        if (count == 3) {
 	        	return "BLACK";
@@ -79,7 +82,7 @@ public class Palette {
 	                return "PURPLE";
 	            }
 	        }
-	        return "No colours added";
+	        return "";
 	    }
 	    public String display() {
 	        StringBuilder result = new StringBuilder();
