@@ -15,11 +15,10 @@ public class Palette {
         }
     }
     public void addColour(P_COLOUR colour) {
-        // Check if colour already exists
         for (int i = 0; i < primaryColours.length; i++) {
             if (primaryColours[i] == colour) {
-                return; // Colour already exists, don't add
-            }
+                return; 
+                }
         }
         for (int i = 0; i < primaryColours.length; i++) {
             if (primaryColours[i] == null) {
@@ -30,12 +29,12 @@ public class Palette {
         throw new IllegalStateException("Cannot add more than 3 colours");
     }
     public String getColours() {
-    StringBuilder result = new StringBuilder();
+     StringBuilder result = new StringBuilder();
     boolean hasColours = false;
      for (int i = 0; i < primaryColours.length; i++) {
      if (primaryColours[i] != null) {
      if (hasColours) {
-     result.append(", ");
+       result.append(", ");
      }
      result.append(primaryColours[i]);
          hasColours = true;

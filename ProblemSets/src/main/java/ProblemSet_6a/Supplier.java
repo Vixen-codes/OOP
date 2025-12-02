@@ -10,7 +10,7 @@ public class Supplier {
 	        this.name = name;
 	        this.phone = phone;
 	    }
-	    private boolean isValidPhone(String phone) {
+	     private boolean isValidPhone(String phone) {
 	        if (phone == null) {
 	            return false;
 	        }
@@ -20,11 +20,11 @@ public class Supplier {
 	    public String getName() {
 	        return name;
 	    }
-	    public String getPhone() {
+	   public String getPhone() {
 	        return phone;
 	    }
-	    @Override
-	    public String toString() {
+	   @Override
+	   public String toString() {
 	        return name + "(" + phone + ")";
 	    }
 	}
