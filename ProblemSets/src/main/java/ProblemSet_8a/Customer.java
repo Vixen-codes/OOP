@@ -21,9 +21,12 @@ public class Customer {
 	        return surname;
 	    }
 	public void setSurname(String surname) {
+		if (!validateInfo(surname)) {
+			throw new IllegalArgumentException("Surname must start with a capital letter followed by lowercase letters only.");	
+		}
 		this.surname = surname;
 	}
-	public boolean validateInfo(String info) {
+	public static boolean validateInfo(String info) {
 		if (info == null || info.isEmpty()) {
 			return false;
 		}
