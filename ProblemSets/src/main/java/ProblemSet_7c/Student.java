@@ -20,7 +20,6 @@ public class Student {
       StringBuilder formatted = new StringBuilder();
       for (int i = 0; i < words.length; i++) {
           if (words[i].length() > 0) {
-              // Capitalize first letter, lowercase the rest
               formatted.append(Character.toUpperCase(words[i].charAt(0)));
               formatted.append(words[i].substring(1).toLowerCase());
               if (i < words.length - 1) {
@@ -30,32 +29,26 @@ public class Student {
          }
       return formatted.toString();
   }
-  // Validate URN - must be 5 digits, otherwise return "00000"
   private String validateUrn(String urn) {
       if (urn != null && urn.matches("\\d{5}")) {
           return urn;
       }
       return "00000";
   }
-  // Getter for URN (returns as int)
   public int getUrn() {
       return Integer.parseInt(urn);
   }
-  // Getter for name
   public String getName() {
       return name;
   }
-  // Add module to the list (only if it doesn't already exist)
   public void addModuleList(Module module) {
       if (module == null) {
           return;
       }
-      // Check if module already exists
       if (!moduleExists(module)) {
           moduleList.add(module);
       }
   }
-  // Private helper method to check if module already exists in the list
   private boolean moduleExists(Module module) {
       for (Module m : moduleList) {
           if (m.getName().equals(module.getName())) {
@@ -64,7 +57,6 @@ public class Student {
       }
       return false;
   }
-  // Print all modules in the format: COM1025, COM1026, COM1027
   public String printModules() {
       if (moduleList.isEmpty()) {
           return "";

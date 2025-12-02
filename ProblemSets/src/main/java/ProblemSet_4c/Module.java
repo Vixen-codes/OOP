@@ -10,19 +10,19 @@ public class Module {
   }
   public String getStudentDetails() {
 	  return code + ": " + average;
-  }
+     }
   public double getAverage() {
 	  return average;
-  }
+   }
   public void setAverage(double average) {
 	  this.average = average;
-  }
+     }
   public String getCode() {
 	return code;
-  }
+   }
   public void setCode(String code) {
 	this.code = code;
-  }
+   }
   @Override
   public String toString() {
       return code + ": " + average;
