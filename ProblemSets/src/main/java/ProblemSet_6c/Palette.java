@@ -82,9 +82,15 @@ public class Palette {
 	        	return "BLACK";
 	        }
 	        if (count == 1) {
-	        	if (hasRed) return "RED";
-	            if (hasYellow) return "YELLOW";
-	            if (hasBlue) return "BLUE";
+	        	if (hasRed) {
+	        		return "RED";
+	        	}
+	            if (hasYellow) {
+	            	return "YELLOW";
+	            }
+	            if (hasBlue) {
+	            	return "BLUE";
+	            }
 	        }
 	        if (count == 2) {
 	            if (hasRed && hasYellow) {
