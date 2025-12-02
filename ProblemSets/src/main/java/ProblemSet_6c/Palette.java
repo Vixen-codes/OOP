@@ -8,6 +8,15 @@ public class Palette {
 	    public Palette(P_COLOUR[] colours) {
 	        this.primaryColours = new P_COLOUR[3];
 	        if (colours != null) {
+	        	int count = 0;
+	        	for (int i = 0; i < colours.length; i++) {
+	        		if (colours[i] != null) {
+	        			count++;
+	        		}
+	        	}
+	        	if (count > 2) {
+	        		throw new IllegalArgumentException("Cannot initialise, more than 2 colours");
+	        	}
 	            for (int i = 0; i < colours.length && i < 3; i++) {
 	                this.primaryColours[i] = colours[i];
 	            }
