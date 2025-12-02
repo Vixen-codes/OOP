@@ -6,7 +6,10 @@ public class Customer {
 	private String surname;
 	public Customer(String name, String surname) {
 		if (!validateInfo(name) || !validateInfo(surname)) {
-			throw new IllegalArgumentException("Name and surname must start with a capital letter followed by lowercase letters only.");
+			throw new IllegalArgumentException("Name and surname"
+					+ " must start with "
+					+ "a capital letter followed by lowercase "
+					+ "letters only.");
 		}
 		this.name = name;
 		this.surname = surname;
@@ -18,7 +21,6 @@ public class Customer {
 	        return surname;
 	    }
 	public void setSurname(String surname) {
-		
 		this.surname = surname;
 	}
 	public static boolean validateInfo(String info) {
