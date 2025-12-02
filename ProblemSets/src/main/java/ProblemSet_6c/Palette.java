@@ -14,8 +14,9 @@ public class Palette {
 	        			count++;
 	        		}
 	        	}
-	        	if (count > 2) {
-	        		throw new IllegalArgumentException("Cannot initialise, more than 2 colours");
+	       if (count > 2) {
+	        	throw new IllegalArgumentException("Cannot "
+	        	+ "initialise, more than 2 colours");
 	        	}
 	            for (int i = 0; i < colours.length && i < 3; i++) {
 	                this.primaryColours[i] = colours[i];
@@ -25,16 +26,18 @@ public class Palette {
 	    public void addColour(P_COLOUR colour) {
 	        for (int i = 0; i < primaryColours.length; i++) {
 	            if (primaryColours[i] == colour) {
-	               throw new IllegalArgumentException("Colour already exists in palette");
+	               throw new IllegalArgumentException("Colour "
+	               		+ "already exists in palette");
 	            }
 	        }
-	        for (int i = 0; i < primaryColours.length; i++) {
+	   for (int i = 0; i < primaryColours.length; i++) {
 	            if (primaryColours[i] == null) {
 	                primaryColours[i] = colour;
 	                return;
-	            }
-	        }
-	        throw new IllegalArgumentException("Cannot add more than 3 colours");
+	          }
+	    }
+	      throw new IllegalArgumentException("Cannot "
+	        		+ "add more than 3 colours");
 	    }
 	    public String getColours() {
 	    StringBuilder result = new StringBuilder();
@@ -63,9 +66,11 @@ public class Palette {
 	        		count++;
 	        		if (primaryColours[i] == P_COLOUR.RED) {
 	        			hasRed = true;
-	        		} else if (primaryColours[i] == P_COLOUR.YELLOW) {
+	        		} else if (primaryColours[i]
+	        				== P_COLOUR.YELLOW) {
 	        			hasYellow = true;
-	        		} else if (primaryColours[i] == P_COLOUR.BLUE) {
+	        		} else if (primaryColours[i]
+	        				== P_COLOUR.BLUE) {
 	        			hasBlue = true;
 	        		}
 	        	}
