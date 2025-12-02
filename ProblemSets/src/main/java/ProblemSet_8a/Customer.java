@@ -7,9 +7,9 @@ public class Customer {
 	public Customer(String name, String surname) {
 		if (!validateInfo(name) || !validateInfo(surname)) {
 			throw new IllegalArgumentException("Name and surname"
-					+ " must start with "
-					+ "a capital letter followed by lowercase "
-					+ "letters only.");
+			+ " must start with "
+		+ "a capital letter followed by lowercase "
+			+ "letters only.");
 		}
 		this.name = name;
 		this.surname = surname;
