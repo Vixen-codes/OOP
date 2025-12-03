@@ -4,11 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Guest {
+	//for guest's surname
   private String surname;
+  //for guest's forenanme
   private String forename;
+  //for address
   private String address;
+  //for telephone
   private String telephone;
+  //for all charges by the guest
   private List<Charge> charges;
+  //constructor (parameterised)
   public Guest(String forename, String surname,
 		  String address, String telephone) {
 	  this.surname = surname;
@@ -32,13 +38,16 @@ public class Guest {
    public List<Charge> getCharges() {
 	   return charges;
    }
+   //when the guest uses and different and new service the charge is added
     public void addCharge(Service s, double c) {
 	   Charge charge = newCharge(s, c);
 	   charges.add(charge);
    }
+    //makes and returns new charge object
    private Charge newCharge(Service s, double c) {
 		return new Charge(s, c);
 	}
+   //calcs the total charge excluding VAT
    public double calculateTotalChargeWithoutVAT() {
 	   double total = 0.0;
 	   for (Charge charge : charges) {
@@ -46,6 +55,7 @@ public class Guest {
 	   }
 	   return total;
    }
+   //same as the last one just now includes the vat
    public double calculateTotalChargeIncVat() {
 	   double total = 0.0;
 	   for (Charge charge : charges) {
@@ -53,6 +63,7 @@ public class Guest {
 	   }
 	   return total;
    }
+   //cals total VAT charged to the specific rate
    public double calculateVATChargeAtRate(VATRate r) {
 	   double totalVAT = 0.0;
 	   for (Charge charge : charges) {

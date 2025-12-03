@@ -19,11 +19,11 @@ public class PersonTracker {
                 content.append(line).append("\n");
                 breakLine(line);
             }
-        } catch (IOException e) {
+           } catch (IOException e) {
             System.err.println("Error reading file: " + e.getMessage());
         }
         return content.toString();
-    }
+       }
        private void breakLine(String line) {
         if (line == null || line.trim().isEmpty()) {
             return;
@@ -32,13 +32,13 @@ public class PersonTracker {
         if (parts.length >= 3) {
             String forename = parts[0];
             String surname = parts[1];
-            try {
-                int age = Integer.parseInt(parts[2]);
-                addPerson(forename, surname, age);
-            } catch (NumberFormatException e) {
-                System.err.println("Invalid age format in line: " + line);
+          try {
+              int age = Integer.parseInt(parts[2]);
+              addPerson(forename, surname, age);
+          } catch (NumberFormatException e) {
+              System.err.println("Invalid age format in line: " + line);
             }
-        }
+      }
             }
     public void addPerson(String n, String s, int a) {
         Person person = new Person(n, s, a);

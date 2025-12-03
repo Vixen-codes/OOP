@@ -31,6 +31,10 @@ public class Charge {
 	public void setCharge(double charge) {
 		this.charge = charge;
 	}
+	//this calcs the VAT amount for this charge.
+	//since different services get charged VAT at diff rates
+	//the VAT rate has to be takn from the object it is referring to from service
+	//and it is calculated by multiplying the charge with the VAT rate
     public double calculateVAT() {
     	return charge * service.getRate().getRate();
     }
