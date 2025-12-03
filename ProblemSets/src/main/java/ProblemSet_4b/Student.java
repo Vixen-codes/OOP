@@ -8,7 +8,7 @@ public class Student {
     	 this.initial = initial;
     	 this.surname = surname;
      }
-     //method to get student details
+     //method to get student details.....
      public String getStudentDetails() {
     	 return initial + ". " + surname;
      }
