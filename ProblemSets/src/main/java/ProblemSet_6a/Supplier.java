@@ -21,15 +21,12 @@ public class Supplier {
 		String digits = phone.replace("-", "");
 		return digits.matches("01483\\d{6}");
 	}
-
-	public String getName() {
-		return name;
-	}
-
 	public String getPhone() {
 		return phone;
 	}
-
+	public String getName() {
+		return name;
+	}
 	@Override
 	public String toString() {
 		return name + "(" + phone + ")";
